@@ -2312,7 +2312,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .two-fifths,
 .two-sixths,
 .two-thirds,
-.site-header .header-nav {
+.site-header .header-nav,
+.main-navigation {
   float: left;
   margin-left: 2.5641025641%; }
 
@@ -2327,7 +2328,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .four-sixths,
 .two-thirds,
-.site-header .header-nav {
+.site-header .header-nav,
+.main-navigation {
   width: 65.811965812%; }
 
 .one-fourth {
@@ -2375,7 +2377,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   .two-fifths,
   .two-sixths,
   .two-thirds,
-  .site-header .header-nav {
+  .site-header .header-nav,
+  .main-navigation {
     display: block;
     position: relative;
     width: 100%;
@@ -2411,8 +2414,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     .two-sixths:after,
     .two-thirds:before,
     .site-header .header-nav:before,
+    .main-navigation:before,
     .two-thirds:after,
-    .site-header .header-nav:after {
+    .site-header .header-nav:after,
+    .main-navigation:after {
       content: " ";
       display: table; }
     .five-sixths:after,
@@ -2431,7 +2436,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     .two-fifths:after,
     .two-sixths:after,
     .two-thirds:after,
-    .site-header .header-nav:after {
+    .site-header .header-nav:after,
+    .main-navigation:after {
       clear: both; } }
 .site,
 .site-content {
@@ -2452,7 +2458,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   position: relative;
   float: left;
   margin: 0;
-  padding: 60px;
   width: calc(100% - (250px + 30px)); }
   .home #primary {
     border: none;
@@ -2462,6 +2467,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       clear: both;
       border: none;
       padding: 0; } }
+  @media screen and (min-width: 801px) {
+    #primary {
+      padding: 60px;
+      border: 1px solid #ecf0f1; } }
 
 #secondary {
   display: inline-block;
@@ -2481,7 +2490,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     display: block;
     position: relative;
     width: 100%;
-    margin: 0 auto 15px; }
+    margin: 0 auto 15px;
+    border: none;
+    box-shadow: none; }
     #primary:before, #primary:after,
     #secondary:before,
     #secondary:after {
@@ -2525,9 +2536,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   .site:after,
   .site-content:after {
     clear: both; }
-
-#primary {
-  border: 1px solid #ecf0f1; }
 
 /*--------------------------------------------------------------
 # Normalize
@@ -2972,13 +2980,10 @@ a img {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  clear: both;
-  display: block;
-  float: right;
-  width: 100%; }
-  .header-nav .main-navigation {
-    width: auto; }
+  float: right; }
   .main-navigation ul {
+    width: auto;
+    float: right;
     display: none;
     list-style: none;
     margin: 0;
@@ -3016,7 +3021,14 @@ a img {
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (min-width: 37.5em) {
+button.menu-toggle {
+  float: right;
+  font-family: "LatoWebBold", "LatoWebLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase; }
+  button.menu-toggle:after {
+    clear: both; }
+
+@media screen and (min-width: 801px) {
   .menu-toggle {
     display: none; }
 
@@ -3039,6 +3051,51 @@ a img {
   text-align: right;
   width: 50%; }
 
+@media screen and (max-width: 800px) {
+  .main-navigation {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 30px;
+    right: 15px;
+    width: 240px; }
+    .main-navigation ul {
+      width: 100%;
+      float: left;
+      display: none;
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+      background: #fafafa; }
+      .main-navigation ul ul {
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+        float: left;
+        position: absolute;
+        top: 15px;
+        left: -999em;
+        z-index: 99999; }
+        .main-navigation ul ul ul {
+          left: -999em;
+          top: 0; }
+        .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+          left: 100%; }
+        .main-navigation ul ul a {
+          width: 200px; }
+      .main-navigation ul li:hover > ul,
+      .main-navigation ul li.focus > ul {
+        left: auto; }
+    .main-navigation li {
+      clear: both;
+      display: block;
+      position: relative;
+      width: 100%;
+      line-height: 2; }
+    .main-navigation a {
+      display: block;
+      text-decoration: none;
+      padding: 0 15px; }
+    .main-navigation li:last-child > a {
+      margin-right: 0; } }
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/

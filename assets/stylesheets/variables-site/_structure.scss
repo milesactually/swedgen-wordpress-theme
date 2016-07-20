@@ -157,9 +157,7 @@ $desktop: 801px;
     position: relative;
     float: left;
     margin: 0;
-    padding: $spacer-xl;
     width: calc(100% - (#{$width-sidebar-primary} + #{$width-content-gutter}));
-    @extend %border-default;
     .home & {
         @extend %block-default-full-width;
         border: none;
@@ -169,6 +167,10 @@ $desktop: 801px;
         clear: both;
         border: none;
         padding: 0;
+    }
+    @media screen and (min-width: $desktop) {
+        padding: $spacer-xl;
+        border: 1px solid $color-border;
     }
 }
 
@@ -182,7 +184,7 @@ $desktop: 801px;
     background: $color-sidebar-primary-bg;
     padding: $spacer-lg;
     .widget:last-child {
-    	margin-bottom: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -193,6 +195,8 @@ $desktop: 801px;
         position: relative;
         width: 100%;
         margin: 0 auto $spacer-base;
+        border: none;
+        box-shadow: none;
         &:before,
         &:after {
             content: " ";
