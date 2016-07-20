@@ -1,0 +1,48 @@
+@import "lato_font";
+@import "libre_baskerville_font";
+@import "../fontawesome/font-awesome";
+
+
+$font-size-base:          	16px !default;
+$font-size-large:         	ceil(($font-size-base * 1.25)) !default;
+$font-size-small:         	ceil(($font-size-base * 0.85)) !default;
+$font-size-h1:            	floor(($font-size-base * 2.6 * .55)) !default;
+$font-size-h2:            	floor(($font-size-base * 2.15 * .55)) !default;
+$font-size-h3:            	ceil(($font-size-base * 1.7 * .55)) !default;
+$font-size-h4:            	ceil(($font-size-base * 1.5 * .55)) !default;
+$font-size-h5:            	ceil(($font-size-base * 1)) !default;
+$font-size-h6:            	ceil(($font-size-base * 0.55)) !default;
+$font-sans: 				"LatoWebLight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+$font-serif: 				"libre_baskervilleregular", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif !default;
+$font-serif-italic:			"libre_baskervilleitalic" !default;
+$font-mono:					Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !default;
+$font-sans-bold:			"LatoWebBold", $font-sans !default;
+$font-sans-black:			"LatoWebBlack", $font-sans !default;
+$font-weight-base:			normal !default;
+$font-weight-headings:		normal !default;
+$line-height-base:  		1.625 !default;
+$font-base-hairline:		"LatoWebHairline", $font-sans !default;
+$font-base-thin:			"LatoWebThin", $font-sans !default;
+$font-base-light:			"LatoWebLight", $font-sans !default;
+$font-base-medium:			"LatoWebMedium", $font-sans !default;
+$font-base-bold:			"LatoWebBold", $font-sans !default;
+$font-base-heavy:			"LatoWebHeavy", $font-sans !default;
+$font-base-black:			"LatoWebBlack", $font-sans !default;
+$font-narrow-light:			"oswaldlight", $font-sans !default;
+$font-narrow-regular:		"oswald_regular", $font-sans !default;
+$font-narrow-medium:		"oswaldmedium", $font-sans !default;
+$font-narrow-bold:			"oswaldbold", $font-sans !default;
+$font-headings:				$font-serif !default;
+$font-base:					$font-sans !default;
+$font-normal:				$font-sans !default;
+$font-base-italic:			"LatoWebLightItalic", $font-base !default;
+$font-body:					$font-base !default;
+$font-default:				$font-base !default;
+
+$font-code: 				$font-mono;
+$font-pre: 					"Courier 10 Pitch", Courier, monospace;
+$line-height-base: 			1.625;
+$line-height-pre: 			1.6;
+$line-height-headings: 		1.2;
+$font-weight-base: 			normal;
+$font-weight-headings: 		inherit;

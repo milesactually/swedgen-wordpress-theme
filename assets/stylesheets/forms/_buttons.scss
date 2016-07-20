@@ -1,0 +1,21 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@include transition(all, 0.3s, ease-in-out);
+	border: none;
+	outline: none;
+	box-shadow: none;
+	text-shadow: none;
+	background: $color-button-bg;
+	color: $color-button;
+	line-height: 1;
+	padding: 5px 10px 6px;
+	&:hover {
+		background: lighten($color-button-bg, 7%);
+	}
+	&:active,
+	&:focus {
+		background: darken($color-button-bg, 7%);
+	}
+}

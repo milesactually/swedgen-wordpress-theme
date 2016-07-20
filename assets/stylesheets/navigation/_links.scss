@@ -1,0 +1,25 @@
+a {
+	color: $color-cta;
+	@include transition(all, 0.3s, ease-in-out);
+	&:visited {
+		color: $color-cta-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color-cta-hover;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+a img {
+	@include transition(all, 0.3s, ease-in-out);
+	&:hover {
+		opacity: .8;
+	}
+}

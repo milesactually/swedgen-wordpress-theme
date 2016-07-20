@@ -1,0 +1,12 @@
+.site-footer {
+	clear: both;
+	@extend %block-default-full-width;
+	height: $height-site-footer;
+	margin-top: $spacer-lg;
+	text-align: center;
+	background: $color-site-footer-bg;
+	line-height: $height-site-footer;
+	@media screen and (max-width: $mobile) {
+		margin-top: $spacer-base;
+	}
+}

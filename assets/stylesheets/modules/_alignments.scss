@@ -1,0 +1,21 @@
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: $spacer-base;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: $spacer-base;
+}
+
+.aligncenter,
+.alignnone {
+	clear: both;
+	@extend %block-default-full-width;
+	margin-bottom: $spacer-sm;
+}
+.wp-post-image {
+	margin-bottom: $spacer-lg;
+}

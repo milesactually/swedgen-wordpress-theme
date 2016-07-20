@@ -1,0 +1,55 @@
+// Colors
+$color-gray-1:			#ecf0f1;
+$color-gray-2:			#bdc3c7;
+$color-gray-3:			#95a5a6;
+$color-gray-4:			#7f8c8d;
+$color-yellow:			#f1c40f;
+$color-orange-1:		#f39c12;
+$color-orange-2:		#e67e22;
+$color-orange-3:		#d35400;
+$color-red-1:			#e74c3c;
+$color-red-2:			#c0392b;
+$color-green-1:			#1abc9c;
+$color-green-2:			#16a085;
+$color-green-3:			#2ecc71;
+$color-green-4:			#27ae60;
+$color-blue-1:			#3498db;
+$color-blue-2:			#2980b9;
+$color-blue-3:			#34495e;
+$color-blue-4:			#2c3e50;
+$color-purple-1:		#9b59b6;
+$color-purple-2:		#8e44ad;
+$brand-primary:         $color-blue-2;
+$color-primary:			$brand-primary;
+$color-border:			$color-gray-1;
+$white:					#fff;
+$black:					#000;
+$white-tint:			rgba(255,255,255,.85);
+$black-tint:			rgba(0,0,0,.85);
+
+$color-site-header-bg:	$color-gray-1;
+$color-site-footer-bg:	$color-gray-1;
+$color-sidebar-primary-bg: #fafafa;
+
+$color-body-bg: #fff;
+$color-screen-bg: #f1f1f1;
+$color-hr-bg: #ccc;
+$color-button-bg: #e6e6e6;
+$color-pre-bg: #eee;
+$color-ins-bg: #fff9c0;
+
+$color-text: #21759b;
+$color-input-text: #666;
+$color-input-text-focus: #111;
+$color-cta: $color-orange-3;
+$color-cta-visited: $color-cta;
+$color-cta-hover: lighten($color-cta, 10%);
+$color-cta-active: darken($color-cta, 10%);
+$color-text-main: #404040;
+$color-button: $white;
+$color-button-bg: $color-cta;
+$color-button-border: #ccc #ccc #bbb;
+$color-button-border-hover: #ccc #bbb #aaa;
+$color-button-border-focus: #aaa #bbb #bbb;
+$color-input-border: #ccc;
+$color-abbr-border: #666;

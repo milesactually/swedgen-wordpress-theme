@@ -1,0 +1,58 @@
+p {
+    margin: 0 0 $spacer-base;
+    &:last-child {
+        margin: 0;
+    }
+}
+p:empty {
+    margin: 0;
+}
+
+dfn,
+cite,
+em,
+i {
+    font-style: italic;
+}
+
+blockquote {
+    margin: 0 $spacer-base;
+}
+
+address {
+    margin: 0 0 $spacer-base;
+}
+
+pre {
+    background: $color-pre-bg;
+    font-family: $font-pre;
+    line-height: $line-height-pre;
+    margin-bottom: $spacer-base;
+    max-width: 100%;
+    overflow: auto;
+    padding: $spacer-base;
+}
+
+code,
+kbd,
+tt,
+var {
+    font-family: $font-code;
+}
+
+abbr,
+acronym {
+    border-bottom: 1px dotted $color-abbr-border;
+    cursor: help;
+}
+
+mark,
+ins {
+    background: $color-ins-bg;
+    text-decoration: none;
+}
+
+big {
+    font-size: 125%;
+}
+

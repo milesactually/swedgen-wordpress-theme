@@ -1,0 +1,207 @@
+$width-site: 100%;
+$width-content: 1170px;
+$width-content-gutter: 30px;
+$width-sidebar-primary: 250px;
+$width-sidebar-secondary: 180px;
+$height-site-header: 90px;
+$height-site-footer: 80px;
+$mp5: 5px;
+$mp10: 10px;
+$mp15: 15px;
+$mp20: 20px;
+$mp30: 30px;
+$mp40: 40px;
+$mp50: 50px;
+$mp60: 60px;
+$spacer-xs: $mp5;
+$spacer-sm: $mp10;
+$spacer-base: $mp15;
+$spacer-lg: $mp30;
+$spacer-xl: $mp60;
+$mobile: 800px;
+$desktop: 801px;
+
+/* Column Classes
+ *
+ * Width: 1170px
+ * Gutter: 30px
+ * Link: http://www.billerickson.net/column-class-generator/
+--------------------------------------------- */
+
+.five-sixths,
+.four-sixths,
+.four-fifths,
+.one-fifth,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-fifths,
+.three-sixths,
+.two-fourths,
+.two-fifths,
+.two-sixths,
+.two-thirds {
+    float: left;
+    margin-left: 2.5641025641%;
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+    width: 48.7179487179%;
+}
+
+.one-third,
+.two-sixths {
+    width: 31.6239316239%;
+}
+
+.four-sixths,
+.two-thirds {
+    width: 65.811965812%;
+}
+
+.one-fourth {
+    width: 23.0769230769%;
+}
+
+.three-fourths {
+    width: 74.358974359%;
+}
+
+.one-fifth {
+    width: 17.9487179487%;
+}
+
+.two-fifths {
+    width: 38.4615384615%;
+}
+
+.three-fifths {
+    width: 58.9743589744%;
+}
+
+.four-fifths {
+    width: 79.4871794872%;
+}
+
+.one-sixth {
+    width: 14.5299145299%;
+}
+
+.five-sixths {
+    width: 82.905982906%;
+}
+
+.first {
+    clear: both;
+    margin-left: 0;
+}
+
+@media screen and (max-width: $mobile) {
+    .five-sixths,
+    .four-sixths,
+    .four-fifths,
+    .one-fifth,
+    .one-fourth,
+    .one-half,
+    .one-sixth,
+    .one-third,
+    .three-fourths,
+    .three-fifths,
+    .three-sixths,
+    .two-fourths,
+    .two-fifths,
+    .two-sixths,
+    .two-thirds {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: 0 auto $spacer-base;
+        &:before,
+        &:after {
+            content: " ";
+            display: table;
+        }
+        &:after {
+            clear: both;
+        }
+    }
+}
+
+.site,
+.site-content {
+    @extend %block-default-full-width-height;
+    min-height: 100%;
+}
+
+.wrap {
+    @extend %block-default-full-width;
+    max-width: $width-content;
+}
+
+//.single {
+#content {
+    max-width: $width-content;
+    padding: 0 $spacer-base;
+    .home & {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+#primary {
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: $spacer-xl;
+    width: calc(100% - (#{$width-sidebar-primary} + #{$width-content-gutter}));
+    @extend %border-default;
+    .home & {
+        @extend %block-default-full-width;
+        border: none;
+        padding: 0;
+    }
+    @media screen and (max-width: $mobile) {
+        clear: both;
+        border: none;
+        padding: 0;
+    }
+}
+
+#secondary {
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin: 0;
+    padding: 0;
+    width: $width-sidebar-primary;
+    background: $color-sidebar-primary-bg;
+    padding: $spacer-lg;
+    .widget:last-child {
+    	margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    #primary,
+    #secondary {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: 0 auto $spacer-base;
+        &:before,
+        &:after {
+            content: " ";
+            display: table;
+        }
+        &:after {
+            clear: both;
+        }
+    }
+}
+
+//}

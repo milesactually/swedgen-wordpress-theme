@@ -1,0 +1,31 @@
+.site-header {
+	display: block;
+	position: fixed;
+	width: 100%;
+    height: $height-site-header;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $color-site-header-bg;
+    z-index: 2;
+    .logged-in & {
+    	top: 32px;
+    }
+    .wrap {
+        padding: $spacer-base;
+    }
+    .site-branding {
+    	@extend .one-third;
+    	margin-left: 0;
+    }
+    .header-nav {
+    	@extend .two-thirds;
+    }
+    h1.site-title,
+    h2.site-description {
+    	margin: 0;
+    	padding: 0;
+    	line-height: 1.1;
+    }
+}
