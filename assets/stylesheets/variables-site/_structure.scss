@@ -183,9 +183,6 @@ $desktop: 801px;
     width: $width-sidebar-primary;
     background: $color-sidebar-primary-bg;
     padding: $spacer-lg;
-    .widget:last-child {
-        margin-bottom: 0;
-    }
 }
 
 @media screen and (max-width: $mobile) {
@@ -208,4 +205,26 @@ $desktop: 801px;
     }
 }
 
-//}
+.blog .hentry {
+    @media screen and (min-width: $desktop) {
+        clear: none;
+        display: inline-block;
+        position: relative;
+        width: calc(50% - #{$spacer-base});
+        padding: $spacer-base;
+        background: $color-gray-1;
+        margin-bottom: $spacer-lg;
+        &:nth-child(even) {
+            clear: left;
+            float: left;
+            margin-right: $spacer-base;
+        }
+        &:nth-child(odd) {
+            float: right;
+            margin-left: $spacer-base;
+        }
+        img {
+        	margin-bottom: $spacer-sm;
+        }
+    }
+}

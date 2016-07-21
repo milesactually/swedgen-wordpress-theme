@@ -9,4 +9,10 @@
 	@media screen and (max-width: $mobile) {
 		margin-top: $spacer-base;
 	}
+	.home & {
+		margin-top: 0;
+		@media screen and (max-width: $mobile) {
+			margin-top: 0;
+		}
+	}
 }

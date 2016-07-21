@@ -14,11 +14,15 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+	@extend %block-default-full-width;
 	color: $color-input-text;
 	border: 1px solid $color-input-border;
-	border-radius: 3px;
-	padding: 3px;
-
+	background: $color-input-bg;
+	border-radius: 0;
+	padding: 14px 4px;
+	outline: none;
+	box-shadow: none;
+	text-shadow: none;
 	&:focus {
 		color: $color-input-text-focus;
 	}
