@@ -188,5 +188,5 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Load site-specific customizations.
  */
-//require get_template_directory() . '/inc/swedgen-options.php';
+require get_template_directory() . '/inc/swedgen-options-3.php';
 

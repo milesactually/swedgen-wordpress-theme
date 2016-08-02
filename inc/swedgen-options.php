@@ -1,11 +1,11 @@
 <?php
-add_action( 'admin_menu', 'swedgen_add_admin_menu' );
+add_action( 'admin_menu', 'swedgen_add_theme_page' );
 add_action( 'admin_init', 'swedgen_settings_init' );
 
 
-function swedgen_add_admin_menu(  ) { 
+function swedgen_add_theme_page(  ) { 
 
-	add_menu_page( 'Swedgen', 'Swedgen Options', 'manage_options', 'swedgen', 'swedgen_options_page' );
+	add_menu_page( 'Swedgen', 'Personalize', 'manage_options', 'swedgen', 'swedgen_options_page' );
 
 }
 

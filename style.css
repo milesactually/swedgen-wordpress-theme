@@ -2469,7 +2469,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       padding: 0; } }
   @media screen and (min-width: 801px) {
     #primary {
-      padding: 60px;
+      padding: 30px;
       border: 1px solid #ecf0f1; } }
 
 #secondary {
@@ -3017,23 +3017,58 @@ textarea {
   padding: 14px 4px;
   outline: none;
   box-shadow: none;
-  text-shadow: none; }
-  input[type="text"]:focus,
+  text-shadow: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  input[type="text"]:hover,
+  input[type="email"]:hover,
+  input[type="url"]:hover,
+  input[type="password"]:hover,
+  input[type="search"]:hover,
+  input[type="number"]:hover,
+  input[type="tel"]:hover,
+  input[type="range"]:hover,
+  input[type="date"]:hover,
+  input[type="month"]:hover,
+  input[type="week"]:hover,
+  input[type="time"]:hover,
+  input[type="datetime"]:hover,
+  input[type="datetime-local"]:hover,
+  input[type="color"]:hover,
+  textarea:hover {
+    background: #f5f7f7; }
+  input[type="text"]:active, input[type="text"]:focus,
+  input[type="email"]:active,
   input[type="email"]:focus,
+  input[type="url"]:active,
   input[type="url"]:focus,
+  input[type="password"]:active,
   input[type="password"]:focus,
+  input[type="search"]:active,
   input[type="search"]:focus,
+  input[type="number"]:active,
   input[type="number"]:focus,
+  input[type="tel"]:active,
   input[type="tel"]:focus,
+  input[type="range"]:active,
   input[type="range"]:focus,
+  input[type="date"]:active,
   input[type="date"]:focus,
+  input[type="month"]:active,
   input[type="month"]:focus,
+  input[type="week"]:active,
   input[type="week"]:focus,
+  input[type="time"]:active,
   input[type="time"]:focus,
+  input[type="datetime"]:active,
   input[type="datetime"]:focus,
+  input[type="datetime-local"]:active,
   input[type="datetime-local"]:focus,
+  input[type="color"]:active,
   input[type="color"]:focus,
+  textarea:active,
   textarea:focus {
+    background: #fff;
     color: #111; }
 
 select {
@@ -3323,12 +3358,12 @@ button.menu-toggle {
 .alignleft {
   display: inline;
   float: left;
-  margin-right: 15px; }
+  margin-right: 30px; }
 
 .alignright {
   display: inline;
   float: right;
-  margin-left: 15px; }
+  margin-left: 30px; }
 
 .aligncenter,
 .alignnone {
@@ -3484,15 +3519,20 @@ object {
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
+figure {
+  background: #ecf0f1;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto; }
+
 .wp-caption {
-  margin-bottom: 15px;
   max-width: 100%; }
   .wp-caption img[class*="wp-image-"] {
     display: block;
     margin-left: auto;
     margin-right: auto; }
   .wp-caption .wp-caption-text {
-    margin: 10px 0; }
+    margin: 10px 0 0; }
 
 .wp-caption-text {
   text-align: left; }

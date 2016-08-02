@@ -23,7 +23,13 @@ textarea {
 	outline: none;
 	box-shadow: none;
 	text-shadow: none;
+	@include transition(all, 0.3s, ease-in-out);
+	&:hover {
+		background: lighten($color-input-bg, 3%);
+	}
+	&:active,
 	&:focus {
+		background: $white;
 		color: $color-input-text-focus;
 	}
 }

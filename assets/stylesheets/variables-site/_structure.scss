@@ -169,7 +169,7 @@ $desktop: 801px;
         padding: 0;
     }
     @media screen and (min-width: $desktop) {
-        padding: $spacer-xl;
+        padding: $spacer-lg;
         border: 1px solid $color-border;
     }
 }
